@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <!-- The above 3 meta tags must come first in the <head> element -->
+    <meta name="description" content="Przykładowa strona wykonana według framework'a Bootstrap">
+    <meta name="author" content="Autor Sukcesu">
+    <meta name="keywords" content="bootstrap example front-end-training">
+    <title>Bootstrap Blog Example 2017</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter|Playfair+Display|Raleway">
+    
+    <style>
+    body {
+      font-family: raleway, sans-serif;
+      color: #555;
+      font-size: 15px;
+    }
+    ::selection {
+      color: maroon;
+      background: #FFF056;
+    }
+    .navbar {
+      margin-bottom: 0px;
+      background: -webkit-linear-gradient(left, black, #808080); /* safari */
+      background: -o-linear-gradient(left, black, #808080); /* opera */
+      background: -moz-linear-gradient(left, black, #808080); /* firefox */
+      background: linear-gradient(left, black, #808080); /* standard */
+    }
+    .jumbotron {
+      color: #191919;
+      padding-top: 0px;
+      padding-bottom: 30px;
+      margin-bottom: 0px;
+    }
+    .gradient {
+      background: -webkit-linear-gradient(left, #FFF056, #fff9b3); /* safari */
+      background: -o-linear-gradient(left, #FFF056, #fff9b3); /* opera */
+      background: -moz-linear-gradient(left, #FFF056, #fff9b3); /* firefox */
+      background: linear-gradient(left, #FFF056, #fff9b3); /* standard */
+    }
+    .batonSearch {
+      background-color: #fff9b3;
+    }
+    .newsletter {
+      background-color: maroon;
+      color: white;
+    }
+    .newsletter:hover {
+      background-color: #fff799;
+      color: maroon;
+      border: 2px solid maroon;
+    }
+    .containerMain {
+      height: auto;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+    .label-default {
+      background-color: white;
+      color: maroon;
+      border: 1px solid maroon;
+    }
+    h1 {
+      font-family: 'Architects Daughter', cursive;
+      color: maroon !important;
+    }
+    h2 {
+      margin-bottom: 30px;
+      color: maroon;
+    }
+    .blog-post {
+      margin-bottom: 30px;
+    }
+    h3, h4 {
+      color: maroon;
+    }
+    #myModal {
+      color: black;
+    }    
+    a:link {
+      text-decoration: none;
+      color: maroon;
+    }
+    a:visited {
+      text-decoration: none;
+      color: maroon;
+    }
+    a:hover {
+      text-decoration: none;
+      color: black;
+      font-weight: 900;
+    }
+    footer {
+      padding: 10px;
+    }
+    li.footlist {
+      font-size: 50px;
+      list-style-type: none;
+      display: inline;
+    }
+    
+    </style>
+
+  </head>
+
+  <body>
+
+
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-inverse navbar-static-top"> <!-- also: navbar-fixed-top -->
+      <div class="container">
+
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Strona.pl</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#">O Mnie</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Wyszukaj">
+              <div class="input-group-btn">
+                <button class="btn btn-default batonSearch" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div> <!-- /.container of the navbar-->
+    </nav> <!-- /.navbar -->
+
+
+    <!-- JAMBOTRON -->
+    <div class="jumbotron gradient">
+      <div class="container">
+        
+        <h1>strona.pl</h1>
+        <p>Niezależne kompendium wiedzy o biznesie</p>
+        <!-- button 'newsletter' -->
+        <button type="button" class="btn btn-lg newsletter" data-toggle="modal"
+        data-target="#myModal">Newsletter &raquo;</button>
+        <!-- modal -->
+        
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Zapisz się na newsletter</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="email">Podaj adres e-mail:</label>
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                          <input type="email" class="form-control" id="email" placeholder="E-mail">
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-success">Zapisz się!</button>
+                      <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Zamknij okno</button>
+                    </form>
+                </div>
+              </div> <!-- /.modal-content -->
+          </div> <!-- /.modal-dialog -->
+        </div> <!-- /#myModal -->    
+     
+      </div> <!-- /.container -->
+    </div> <!-- /.jumbotron -->
+
+
+    <!-- CONTAINER-MAIN -->
+    <div class="container containerMain">
+      <div class="row">
+     
+      <!-- blog-main -->
+      <div class="col-sm-8 blog-main">
+        <div class="blog-post">
+            <h2 class="blog-post-title">Przykład Wpisu Na Blogu</h2>
+            <p class="blog-post-meta">1 Marca 2017, dodał <a href="#"><span class="label label-default">Autor Sukcesu</span></a></p>
+            <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+            <hr>
+            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <blockquote>
+            <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <h3>Podtytułem Jestem</h3>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <pre><code>Example code block</code></pre>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+            <h3>Podtytułem Drugim Jestem</h3>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <ul>
+              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            <ol>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+             <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+            </ol>
+            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">Przykład Innego Wpisu Na Blogu</h2>
+            <p class="blog-post-meta">28 Lutego 2017, dodał <a href="#"><span class="label label-default">Autor Sukcesu</span></a></p>
+            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <blockquote>
+            <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        </div>
+      </div> <!-- blog-main -->
+
+      <!-- blog-sidebar -->
+      <div class="col-sm-3 offset-sm-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+             <h4>O Mnie</h4>
+             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+
+        <div class="sidebar-module">
+            <h4>Archiwum</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">Marzec 2017</a></li>
+              <li><a href="#">Luty 2017</a></li>
+              <li><a href="#">Styczeń 2017</a></li>
+              <li><a href="#">Grudzień 2016</a></li>
+              <li><a href="#">Listopad 2016</a></li>
+              <li><a href="#">Październik 2016</a></li>
+              <li><a href="#">Wrzesień 2016</a></li>
+              <li><a href="#">Sierpień 2016</a></li>
+              <li><a href="#">Lipiec 2016</a></li>
+              <li><a href="#">Czerwiec 2016</a></li>
+              <li><a href="#">Maj 2016</a></li>
+              <li><a href="#">Kwiecień 2016</a></li>
+            </ol>
+        </div>
+
+        <div class="sidebar-module">
+            <h4>Znajdź mnie</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/lukaszrej/">GitHub</a></li>
+              <li><a href="https://twitter.com/autorsukcesu">Twitter</a></li>
+              <li><a href="https://www.facebook.com/autor.sukcesu">Facebook</a></li>
+            </ol>
+        </div>
+      </div> <!-- /.blog-sidebar -->
+    
+      </div> <!-- /.row -->
+    </div> <!-- /.CONTAINER-MAIN -->
+
+
+    <!-- FOOTER -->
+    <footer class="gradient text-center">
+      <div class="container"> 
+
+        <ul>
+          <li class="footlist">
+            <a href="https://www.facebook.com/autor.sukcesu" target="_blank">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="footlist">
+            <a href="https://twitter.com/autorsukcesu" target="_blank">
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="footlist">
+            <a href="https://www.instagram.com/autorsukcesu" target="_blank">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </footer>
+    
+
+  <!-- bootstrap core JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
