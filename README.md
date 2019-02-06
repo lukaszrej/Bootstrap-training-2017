@@ -1,2 +1,2 @@
-# bootstrap-training-2017
-A simple web page based on Bootstrap framework and basics of CSS3
+# Bootstrap-training-2017
+Simple web page based on Bootstrap framework and basics of CSS3
